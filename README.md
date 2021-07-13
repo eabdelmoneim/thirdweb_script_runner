@@ -18,3 +18,8 @@ run="npm start"
     "start": "node ."
   }
 ```
+
+4. (Optional) If you had packages like canvas or sqlite before, you need to rebuild them.
+```
+npm rebuild
+```
