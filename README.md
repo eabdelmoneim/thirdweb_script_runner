@@ -2,7 +2,7 @@
 
 Steps:
 
-1. Execute this script to install node (you can change the version by editing the number) and configure npm.
+1. Execute this script **on the shell** to install node (you can change the version by editing the number) and configure npm.
 ```sh
 npm init -y && npm i --save-dev node@14 && npm config set prefix=$(pwd)/node_modules/node && export PATH=$(pwd)/node_modules/node/bin:$PATH
 ```
