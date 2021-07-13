@@ -1,15 +1,18 @@
 {
   "name": "nodejs-custom-version",
   "version": "1.0.0",
-  "description": "",
+  "description": "Steps:",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ."
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "discord.js": "^12.5.1"
+  },
+  "devDependencies": {
+    "node": "^14.17.3"
   }
 }

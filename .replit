@@ -1,1 +1,1 @@
-run="bash node.sh"
+run="npm start"

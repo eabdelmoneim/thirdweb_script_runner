@@ -1,4 +1,4 @@
-require("http").createServer((req, res) => res.end("Avocados are tasty🥑")).listen(process.env.PORT || 8080)
+require("http").createServer((req, res) => res.end(process.version)).listen(8080)
 
 const Discord = require('discord.js')
 const client = new Discord.Client()
