@@ -19,7 +19,7 @@ run="npm start"
   }
 ```
 
-4. (Opcional) Si tenias instalado paquetes como canvas o sqlite, tienes que reconstruirlas
+4. (Opcional) Si tenias instalado paquetes como canvas o sqlite, tienes que reinstalarlos
 ```
-npm rebuild
+npm uninstall canvas && npm i canvas
 ```
