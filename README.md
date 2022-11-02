@@ -1,25 +1,17 @@
-# Node.js 14 on replit
+# Simple typescript project for running thirdweb SDK scripts
 
 Steps:
 
-1. Execute this script **on the shell** to install node (you can choose the version by editing the number 14) and configure npm.
+1. Run yarn install
+
 ```sh
-npm init -y && npm i --save-dev node@14 && npm config set prefix=$(pwd)/node_modules/node && export PATH=$(pwd)/node_modules/node/bin:$PATH
+yarn install
 ```
 
-2. Create the [`.replit`](https://docs.repl.it/repls/dot-replit) to execute node from the shell instead of the console.
-```
-run="npm start"
-```
+2. Create .env
 
-3. Make sure to add the start script in your package.json file
-```js
-  "scripts": {
-    "start": "node ."
-  }
-```
+3. To run script
 
-4. (Optional) If you had packages like canvas or sqlite before, you need to re-install those packages
-```
-npm uninstall canvas && npm i canvas
+```sh
+ts-node index.ts
 ```
