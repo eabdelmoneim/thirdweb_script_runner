@@ -10,7 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@thirdweb-dev/sdk": "3.5.2-dev-7c90f5e",
+    "@thirdweb-dev/sdk": "3.6.0-dev-92ea437",
     "@types/node": "^18.11.8",
     "dotenv": "^16.0.3",
     "ethers": "^5.6.5",

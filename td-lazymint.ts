@@ -14,7 +14,7 @@ const run = async () => {
   );
 
   const contract = await sdk.getContract(
-    "0xab44ffB058aF30C0475Aa27395D2A4117DF71000"
+    "0xD79CecAD2EB0BE9c5Dded6AF4C99e61B2222b86F"
   );
 
   const placeholderMetadata = {
@@ -24,43 +24,43 @@ const run = async () => {
 
   const dreamerMetadata = [
     {
-      name: "DREAMER 11",
+      name: "DREAMER 1",
       description: "Dreamer NFT",
     },
     {
-      name: "DREAMER 12",
+      name: "DREAMER 2",
       description: "Dreamer NFT",
     },
     {
-      name: "DREAMER 13",
+      name: "DREAMER 3",
       description: "Dreamer NFT",
     },
     {
-      name: "DREAMER 14",
+      name: "DREAMER 4",
       description: "Dreamer NFT",
     },
     {
-      name: "DREAMER 15",
+      name: "DREAMER 5",
       description: "Dreamer NFT",
     },
     {
-      name: "DREAMER 16",
-      description: "16 Dreamer NFT",
-    },
-    {
-      name: "DREAMER 17",
+      name: "DREAMER 6",
       description: "Dreamer NFT",
     },
     {
-      name: "DREAMER 18",
+      name: "DREAMER 7",
+      description: "Dreamer NFT",
+    },
+    {
+      name: "DREAMER 8",
       description: "Dreamer NFT 8",
     },
     {
-      name: "DREAMER 19",
+      name: "DREAMER 9",
       description: "Dreamer NFT 9",
     },
     {
-      name: "DREAMER 20",
+      name: "DREAMER 10",
       description: "Dreamer NFT 10",
     },
   ];
@@ -74,43 +74,43 @@ const run = async () => {
 
   const builderMetadata = [
     {
-      name: "BUILDER 11",
+      name: "BUILDER 1",
       description: "BUILDER NFT",
     },
     {
-      name: "BUILDER 12",
+      name: "BUILDER 2",
       description: "BUILDER NFT",
     },
     {
-      name: "BUILDER 13",
+      name: "BUILDER 3",
       description: "BUILDER NFT",
     },
     {
-      name: "BUILDER 14",
+      name: "BUILDER 4",
       description: "BUILDER NFT",
     },
     {
-      name: "BUILDER 15",
+      name: "BUILDER 5",
       description: "BUILDER NFT",
     },
     {
-      name: "BUILDER 16",
+      name: "BUILDER 6",
       description: "BUILDER NFT",
     },
     {
-      name: "BUILDER 17",
+      name: "BUILDER 7",
       description: "BUILDER NFT",
     },
     {
-      name: "BUILDER 18",
+      name: "BUILDER 8",
       description: "BUILDER NFT",
     },
     {
-      name: "BUILDER 19",
+      name: "BUILDER 9",
       description: "BUILDER NFT",
     },
     {
-      name: "BUILDER 20",
+      name: "BUILDER 10",
       description: "BUILDER NFT",
     },
   ];
@@ -124,43 +124,43 @@ const run = async () => {
 
   const angelMetadata = [
     {
-      name: "ANGEL 11",
+      name: "ANGEL 1",
       description: "ANGEL NFT",
     },
     {
-      name: "ANGEL 12",
+      name: "ANGEL 2",
       description: "ANGEL NFT",
     },
     {
-      name: "ANGEL 13",
+      name: "ANGEL 3",
       description: "ANGEL NFT",
     },
     {
-      name: "ANGEL 14",
+      name: "ANGEL 4",
       description: "ANGEL NFT",
     },
     {
-      name: "ANGEL 15",
+      name: "ANGEL 5",
       description: "ANGEL NFT",
     },
     {
-      name: "ANGEL 16",
+      name: "ANGEL 6",
       description: "ANGEL NFT",
     },
     {
-      name: "ANGEL 17",
+      name: "ANGEL 7",
       description: "ANGEL NFT",
     },
     {
-      name: "ANGEL 18",
+      name: "ANGEL 8",
       description: "ANGEL NFT",
     },
     {
-      name: "ANGEL 19",
+      name: "ANGEL 9",
       description: "ANGEL NFT",
     },
     {
-      name: "ANGEL 20",
+      name: "ANGEL 10",
       description: "ANGEL NFT",
     },
   ];
@@ -174,43 +174,43 @@ const run = async () => {
 
   const neoMetadata = [
     {
-      name: "NEO-CAPITALIST 11",
+      name: "NEO-CAPITALIST 1",
       description: "NEO-CAPITALIST NFT",
     },
     {
-      name: "NEO-CAPITALIST 12",
+      name: "NEO-CAPITALIST 2",
       description: "NEO-CAPITALIST NFT",
     },
     {
-      name: "NEO-CAPITALIST 13",
+      name: "NEO-CAPITALIST 3",
       description: "NEO-CAPITALIST NFT",
     },
     {
-      name: "NEO-CAPITALIST 14",
+      name: "NEO-CAPITALIST 4",
       description: "NEO-CAPITALIST NFT",
     },
     {
-      name: "NEO-CAPITALIST 15",
+      name: "NEO-CAPITALIST 5",
       description: "NEO-CAPITALIST NFT",
     },
     {
-      name: "NEO-CAPITALIST 16",
+      name: "NEO-CAPITALIST 6",
       description: "NEO-CAPITALIST NFT",
     },
     {
-      name: "NEO-CAPITALIST 17",
+      name: "NEO-CAPITALIST 7",
       description: "NEO-CAPITALIST NFT",
     },
     {
-      name: "NEO-CAPITALIST 18",
+      name: "NEO-CAPITALIST 8",
       description: "NEO-CAPITALIST NFT",
     },
     {
-      name: "NEO-CAPITALIST 19",
+      name: "NEO-CAPITALIST 9",
       description: "NEO-CAPITALIST NFT",
     },
     {
-      name: "NEO-CAPITALIST 20",
+      name: "NEO-CAPITALIST 10",
       description: "NEO-CAPITALIST NFT",
     },
   ];
