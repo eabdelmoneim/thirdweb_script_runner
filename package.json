@@ -4,7 +4,8 @@
   "description": "Steps:",
   "main": "index.js",
   "scripts": {
-    "start": "ts-node index.ts"
+    "start": "ts-node index.ts",
+    "airdrop": "ts-node multicall.ts"
   },
   "keywords": [],
   "author": "",
@@ -12,6 +13,7 @@
   "dependencies": {
     "@thirdweb-dev/sdk": "3.6.0-dev-92ea437",
     "@types/node": "^18.11.8",
+    "csv-parser": "^3.0.0",
     "dotenv": "^16.0.3",
     "ethers": "^5.6.5",
     "ts": "^0.2.2",
