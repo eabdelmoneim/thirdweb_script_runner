@@ -14,7 +14,7 @@ const run = async () => {
   );
 
   const contract = await sdk.getContract(
-    "0xD79CecAD2EB0BE9c5Dded6AF4C99e61B2222b86F"
+    "0x3929CdE8141b900A28FEf6eC930431EA5fb69398"
   );
 
   const placeholderMetadata = {
@@ -24,43 +24,43 @@ const run = async () => {
 
   const dreamerMetadata = [
     {
-      name: "DREAMER 1",
+      name: "DREAMER 11",
       description: "Dreamer NFT",
     },
     {
-      name: "DREAMER 2",
+      name: "DREAMER 12",
       description: "Dreamer NFT",
     },
     {
-      name: "DREAMER 3",
+      name: "DREAMER 13",
       description: "Dreamer NFT",
     },
     {
-      name: "DREAMER 4",
+      name: "DREAMER 14",
       description: "Dreamer NFT",
     },
     {
-      name: "DREAMER 5",
+      name: "DREAMER 15",
       description: "Dreamer NFT",
     },
     {
-      name: "DREAMER 6",
+      name: "DREAMER 16",
       description: "Dreamer NFT",
     },
     {
-      name: "DREAMER 7",
+      name: "DREAMER 17",
       description: "Dreamer NFT",
     },
     {
-      name: "DREAMER 8",
+      name: "DREAMER 18",
       description: "Dreamer NFT 8",
     },
     {
-      name: "DREAMER 9",
+      name: "DREAMER 19",
       description: "Dreamer NFT 9",
     },
     {
-      name: "DREAMER 10",
+      name: "DREAMER 20",
       description: "Dreamer NFT 10",
     },
   ];
@@ -74,43 +74,43 @@ const run = async () => {
 
   const builderMetadata = [
     {
-      name: "BUILDER 1",
+      name: "BUILDER 11",
       description: "BUILDER NFT",
     },
     {
-      name: "BUILDER 2",
+      name: "BUILDER 12",
       description: "BUILDER NFT",
     },
     {
-      name: "BUILDER 3",
+      name: "BUILDER 13",
       description: "BUILDER NFT",
     },
     {
-      name: "BUILDER 4",
+      name: "BUILDER 14",
       description: "BUILDER NFT",
     },
     {
-      name: "BUILDER 5",
+      name: "BUILDER 15",
       description: "BUILDER NFT",
     },
     {
-      name: "BUILDER 6",
+      name: "BUILDER 16",
       description: "BUILDER NFT",
     },
     {
-      name: "BUILDER 7",
+      name: "BUILDER 17",
       description: "BUILDER NFT",
     },
     {
-      name: "BUILDER 8",
+      name: "BUILDER 18",
       description: "BUILDER NFT",
     },
     {
-      name: "BUILDER 9",
+      name: "BUILDER 19",
       description: "BUILDER NFT",
     },
     {
-      name: "BUILDER 10",
+      name: "BUILDER 20",
       description: "BUILDER NFT",
     },
   ];
@@ -124,43 +124,43 @@ const run = async () => {
 
   const angelMetadata = [
     {
-      name: "ANGEL 1",
+      name: "ANGEL 11",
       description: "ANGEL NFT",
     },
     {
-      name: "ANGEL 2",
+      name: "ANGEL 12",
       description: "ANGEL NFT",
     },
     {
-      name: "ANGEL 3",
+      name: "ANGEL 13",
       description: "ANGEL NFT",
     },
     {
-      name: "ANGEL 4",
+      name: "ANGEL 14",
       description: "ANGEL NFT",
     },
     {
-      name: "ANGEL 5",
+      name: "ANGEL 15",
       description: "ANGEL NFT",
     },
     {
-      name: "ANGEL 6",
+      name: "ANGEL 16",
       description: "ANGEL NFT",
     },
     {
-      name: "ANGEL 7",
+      name: "ANGEL 17",
       description: "ANGEL NFT",
     },
     {
-      name: "ANGEL 8",
+      name: "ANGEL 18",
       description: "ANGEL NFT",
     },
     {
-      name: "ANGEL 9",
+      name: "ANGEL 19",
       description: "ANGEL NFT",
     },
     {
-      name: "ANGEL 10",
+      name: "ANGEL 20",
       description: "ANGEL NFT",
     },
   ];
@@ -174,43 +174,43 @@ const run = async () => {
 
   const neoMetadata = [
     {
-      name: "NEO-CAPITALIST 1",
+      name: "NEO-CAPITALIST 11",
       description: "NEO-CAPITALIST NFT",
     },
     {
-      name: "NEO-CAPITALIST 2",
+      name: "NEO-CAPITALIST 12",
       description: "NEO-CAPITALIST NFT",
     },
     {
-      name: "NEO-CAPITALIST 3",
+      name: "NEO-CAPITALIST 13",
       description: "NEO-CAPITALIST NFT",
     },
     {
-      name: "NEO-CAPITALIST 4",
+      name: "NEO-CAPITALIST 14",
       description: "NEO-CAPITALIST NFT",
     },
     {
-      name: "NEO-CAPITALIST 5",
+      name: "NEO-CAPITALIST 15",
       description: "NEO-CAPITALIST NFT",
     },
     {
-      name: "NEO-CAPITALIST 6",
+      name: "NEO-CAPITALIST 16",
       description: "NEO-CAPITALIST NFT",
     },
     {
-      name: "NEO-CAPITALIST 7",
+      name: "NEO-CAPITALIST 17",
       description: "NEO-CAPITALIST NFT",
     },
     {
-      name: "NEO-CAPITALIST 8",
+      name: "NEO-CAPITALIST 18",
       description: "NEO-CAPITALIST NFT",
     },
     {
-      name: "NEO-CAPITALIST 9",
+      name: "NEO-CAPITALIST 19",
       description: "NEO-CAPITALIST NFT",
     },
     {
-      name: "NEO-CAPITALIST 10",
+      name: "NEO-CAPITALIST 20",
       description: "NEO-CAPITALIST NFT",
     },
   ];
@@ -224,43 +224,43 @@ const run = async () => {
 
   const connectorMetadata = [
     {
-      name: "CONNECTOR 11",
+      name: "CONNECTOR 1",
       description: "CONNECTOR NFT",
     },
     {
-      name: "CONNECTOR 12",
+      name: "CONNECTOR 2",
       description: "CONNECTOR NFT",
     },
     {
-      name: "CONNECTOR 13",
+      name: "CONNECTOR 3",
       description: "CONNECTOR NFT",
     },
     {
-      name: "CONNECTOR 14",
+      name: "CONNECTOR 4",
       description: "CONNECTOR NFT",
     },
     {
-      name: "CONNECTOR 15",
+      name: "CONNECTOR 5",
       description: "CONNECTOR NFT",
     },
     {
-      name: "CONNECTOR 16",
+      name: "CONNECTOR 6",
       description: "CONNECTOR NFT",
     },
     {
-      name: "CONNECTOR 17",
+      name: "CONNECTOR 7",
       description: "CONNECTOR NFT",
     },
     {
-      name: "CONNECTOR 18",
+      name: "CONNECTOR 8",
       description: "CONNECTOR NFT",
     },
     {
-      name: "CONNECTOR 19",
+      name: "CONNECTOR 9",
       description: "CONNECTOR NFT",
     },
     {
-      name: "CONNECTOR 20",
+      name: "CONNECTOR 10",
       description: "CONNECTOR NFT",
     },
   ];
