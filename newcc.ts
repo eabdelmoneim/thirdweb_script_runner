@@ -11,18 +11,27 @@ const run = async () => {
 
   const sdk = ThirdwebSDK.fromPrivateKey(
     PRIVATE_KEY, // Your wallet private key
-    "goerli" // configure this to your network
+    "polygon" // configure this to your network
   );
 
   const contract = await sdk.getContract(
-    "0xaa57b8DEf37FE0f9D91895573b165450E24AeeBB"
+    "0x7223378D975d1Aa6e47e8f302699a437135Ecb78"
   );
 
-  const storage = new ThirdwebStorage();
+  /*const balance = await contract.erc721.balanceOf(
+    "0x95C4267d86dB9203c7cC98b615f9FBC961fc9aE9"
+  );*/
+
+  //console.log(balance.toNumber().toString());
 
   const cc = await contract.erc721.claimConditions.getActive();
   console.log(cc);
 
+  const canClaim = await contract.erc721.claimConditions.canClaim(
+    100,
+    "0x5e01a33C75931aD0A91A12Ee016Be8D61b24ADEB"
+  );
+  console.log(canClaim);
   // const res = await storage.downloadJSON(cc.metadata as string);
   // console.log(res.name);
 };

@@ -7,6 +7,7 @@ const run = async () => {
   // Instantiate thirdweb SDK for read/write
   // PRIVATE_KEY should be put into environment variable
   const PRIVATE_KEY = process.env.KEY as string;
+  const delayedRevealPassword = process.env.DELAYED_REVEAL_PASSWORD as string;
 
   const sdk = ThirdwebSDK.fromPrivateKey(
     PRIVATE_KEY, // Your wallet private key
@@ -14,7 +15,7 @@ const run = async () => {
   );
 
   const contract = await sdk.getContract(
-    "0x3929CdE8141b900A28FEf6eC930431EA5fb69398"
+    "0x74c6340f456d2839239f882707A242B3A2D09FDb"
   );
 
   const placeholderMetadata = {
@@ -24,44 +25,44 @@ const run = async () => {
 
   const dreamerMetadata = [
     {
-      name: "DREAMER 11",
+      name: "DREAMER 31",
       description: "Dreamer NFT",
     },
     {
-      name: "DREAMER 12",
+      name: "DREAMER 32",
       description: "Dreamer NFT",
     },
     {
-      name: "DREAMER 13",
+      name: "DREAMER 33",
       description: "Dreamer NFT",
     },
     {
-      name: "DREAMER 14",
+      name: "DREAMER 34",
       description: "Dreamer NFT",
     },
     {
-      name: "DREAMER 15",
+      name: "DREAMER 35",
       description: "Dreamer NFT",
     },
     {
-      name: "DREAMER 16",
+      name: "DREAMER 36",
       description: "Dreamer NFT",
     },
     {
-      name: "DREAMER 17",
+      name: "DREAMER 37",
       description: "Dreamer NFT",
     },
     {
-      name: "DREAMER 18",
-      description: "Dreamer NFT 8",
+      name: "DREAMER 38",
+      description: "Dreamer NFT",
     },
     {
-      name: "DREAMER 19",
-      description: "Dreamer NFT 9",
+      name: "DREAMER 39",
+      description: "Dreamer NFT",
     },
     {
-      name: "DREAMER 20",
-      description: "Dreamer NFT 10",
+      name: "DREAMER 40",
+      description: "Dreamer NFT",
     },
   ];
 
@@ -70,47 +71,54 @@ const run = async () => {
     dreamerMetadata,
     "dreamer"
   );
+  /* const dreamerTx = await contract.erc721.tieredDrop.createDelayedRevealBatchWithTier(
+    placeholderMetadata,
+    dreamerMetadata,
+    delayedRevealPassword,
+    "dreamer"
+  ); */
+
   console.log(dreamerTx);
 
   const builderMetadata = [
     {
-      name: "BUILDER 11",
+      name: "BUILDER 31",
       description: "BUILDER NFT",
     },
     {
-      name: "BUILDER 12",
+      name: "BUILDER 32",
       description: "BUILDER NFT",
     },
     {
-      name: "BUILDER 13",
+      name: "BUILDER 33",
       description: "BUILDER NFT",
     },
     {
-      name: "BUILDER 14",
+      name: "BUILDER 34",
       description: "BUILDER NFT",
     },
     {
-      name: "BUILDER 15",
+      name: "BUILDER 35",
       description: "BUILDER NFT",
     },
     {
-      name: "BUILDER 16",
+      name: "BUILDER 36",
       description: "BUILDER NFT",
     },
     {
-      name: "BUILDER 17",
+      name: "BUILDER 37",
       description: "BUILDER NFT",
     },
     {
-      name: "BUILDER 18",
+      name: "BUILDER 38",
       description: "BUILDER NFT",
     },
     {
-      name: "BUILDER 19",
+      name: "BUILDER 39",
       description: "BUILDER NFT",
     },
     {
-      name: "BUILDER 20",
+      name: "BUILDER 40",
       description: "BUILDER NFT",
     },
   ];
@@ -120,47 +128,53 @@ const run = async () => {
     builderMetadata,
     "builder"
   );
+  /* const builderTx = await contract.erc721.tieredDrop.createDelayedRevealBatchWithTier(
+    placeholderMetadata,
+    builderMetadata,
+    delayedRevealPassword,
+    "builder"
+  ); */
   console.log(builderTx);
 
   const angelMetadata = [
     {
-      name: "ANGEL 11",
+      name: "ANGEL 31",
       description: "ANGEL NFT",
     },
     {
-      name: "ANGEL 12",
+      name: "ANGEL 32",
       description: "ANGEL NFT",
     },
     {
-      name: "ANGEL 13",
+      name: "ANGEL 33",
       description: "ANGEL NFT",
     },
     {
-      name: "ANGEL 14",
+      name: "ANGEL 34",
       description: "ANGEL NFT",
     },
     {
-      name: "ANGEL 15",
+      name: "ANGEL 35",
       description: "ANGEL NFT",
     },
     {
-      name: "ANGEL 16",
+      name: "ANGEL 36",
       description: "ANGEL NFT",
     },
     {
-      name: "ANGEL 17",
+      name: "ANGEL 37",
       description: "ANGEL NFT",
     },
     {
-      name: "ANGEL 18",
+      name: "ANGEL 38",
       description: "ANGEL NFT",
     },
     {
-      name: "ANGEL 19",
+      name: "ANGEL 39",
       description: "ANGEL NFT",
     },
     {
-      name: "ANGEL 20",
+      name: "ANGEL 40",
       description: "ANGEL NFT",
     },
   ];
@@ -170,47 +184,53 @@ const run = async () => {
     angelMetadata,
     "angel"
   );
+  /* const angelTx = await contract.erc721.tieredDrop.createDelayedRevealBatchWithTier(
+    placeholderMetadata,
+    angelMetadata,
+    delayedRevealPassword,
+    "angel"
+  ); */
   console.log(angelTx);
 
   const neoMetadata = [
     {
-      name: "NEO-CAPITALIST 11",
+      name: "NEO-CAPITALIST 31",
       description: "NEO-CAPITALIST NFT",
     },
     {
-      name: "NEO-CAPITALIST 12",
+      name: "NEO-CAPITALIST 32",
+      description: "NEO-CAPIALIST NFT",
+    },
+    {
+      name: "NEO-CAPITALIST 33",
       description: "NEO-CAPITALIST NFT",
     },
     {
-      name: "NEO-CAPITALIST 13",
+      name: "NEO-CAPITALIST 34",
       description: "NEO-CAPITALIST NFT",
     },
     {
-      name: "NEO-CAPITALIST 14",
+      name: "NEO-CAPITALIST 35",
       description: "NEO-CAPITALIST NFT",
     },
     {
-      name: "NEO-CAPITALIST 15",
+      name: "NEO-CAPITALIST 36",
       description: "NEO-CAPITALIST NFT",
     },
     {
-      name: "NEO-CAPITALIST 16",
+      name: "NEO-CAPITALIST 37",
       description: "NEO-CAPITALIST NFT",
     },
     {
-      name: "NEO-CAPITALIST 17",
+      name: "NEO-CAPITALIST 38",
       description: "NEO-CAPITALIST NFT",
     },
     {
-      name: "NEO-CAPITALIST 18",
+      name: "NEO-CAPITALIST 39",
       description: "NEO-CAPITALIST NFT",
     },
     {
-      name: "NEO-CAPITALIST 19",
-      description: "NEO-CAPITALIST NFT",
-    },
-    {
-      name: "NEO-CAPITALIST 20",
+      name: "NEO-CAPITALIST 40",
       description: "NEO-CAPITALIST NFT",
     },
   ];
@@ -220,47 +240,53 @@ const run = async () => {
     neoMetadata,
     "neo-capitalist"
   );
+  /* const neoTx = await contract.erc721.tieredDrop.createDelayedRevealBatchWithTier(
+    placeholderMetadata,
+    neoMetadata,
+    delayedRevealPassword,
+    "neo-capitalist"
+  ); */
   console.log(neoTx);
 
   const connectorMetadata = [
     {
-      name: "CONNECTOR 1",
+      name: "CONNECTOR 31",
       description: "CONNECTOR NFT",
     },
     {
-      name: "CONNECTOR 2",
+      name: "CONNECTOR 32",
       description: "CONNECTOR NFT",
     },
     {
-      name: "CONNECTOR 3",
+      name: "CONNECTOR 33",
       description: "CONNECTOR NFT",
     },
     {
-      name: "CONNECTOR 4",
+      name: "CONNECTOR 34",
       description: "CONNECTOR NFT",
     },
     {
-      name: "CONNECTOR 5",
+      name: "CONNECTOR 35",
       description: "CONNECTOR NFT",
     },
     {
-      name: "CONNECTOR 6",
+      name: "CONNECTOR 36",
       description: "CONNECTOR NFT",
     },
     {
-      name: "CONNECTOR 7",
+      name: "CONNECTOR 37",
       description: "CONNECTOR NFT",
     },
     {
-      name: "CONNECTOR 8",
+      name: "CONNECTOR 38",
       description: "CONNECTOR NFT",
     },
     {
-      name: "CONNECTOR 9",
+      name: "CONNECTOR 39",
       description: "CONNECTOR NFT",
     },
     {
-      name: "CONNECTOR 10",
+      name: "CONNECTOR 40",
       description: "CONNECTOR NFT",
     },
   ];
@@ -270,6 +296,12 @@ const run = async () => {
     connectorMetadata,
     "connector"
   );
+  /* const connectorlTx = await contract.erc721.tieredDrop.createDelayedRevealBatchWithTier(
+    placeholderMetadata,
+    connectorMetadata,
+    delayedRevealPassword,
+    "connector"
+  ); */
   console.log(connectorTx);
 };
 run()
