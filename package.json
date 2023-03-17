@@ -11,13 +11,17 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@thirdweb-dev/sdk": "3.9.5",
-    "@types/node": "^18.11.8",
+    "@thirdweb-dev/sdk": "3.9.6-dev-cd04fef",
+    "@types/glob": "^8.1.0",
+    "@types/node": "^18.15.2",
     "csv-parser": "^3.0.0",
     "dotenv": "^16.0.3",
-    "ethers": "^5.6.5",
+    "ethers": "^5.7.2",
+    "fs": "^0.0.1-security",
+    "fs.promises": "^0.1.2",
+    "glob": "^8.1.0",
     "ts": "^0.2.2",
-    "ts-node": "^10.4.0"
+    "ts-node": "^10.9.1"
   },
   "devDependencies": {
     "node": "^16.6.1"
