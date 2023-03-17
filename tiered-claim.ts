@@ -23,13 +23,11 @@ const run = async () => {
   );
 
   // test claim one of the NFTs
-  //const tribePriority = ["angel"]; // mint 178
- // const tribePriority = ["builder"]; //mint 178
- const tribePriority = ["connector"]; // mint 177
+  const tribePriority = ["angel","builder","connector"]; // mint 178, 178, 177
 
   const payload = await contract.erc721.tieredDrop.generate({
     to: "0xc3F2b2a12Eba0f5989cD75B2964E31D56603a2cE",
-    quantity: 177,
+    quantity: 533,
     currencyAddress: "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE",
     price: 0,
     tierPriority: tribePriority,
