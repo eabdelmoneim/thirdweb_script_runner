@@ -11,7 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@thirdweb-dev/sdk": "3.9.6-dev-cd04fef",
+    "@thirdweb-dev/sdk": "3.10.11",
     "@types/glob": "^8.1.0",
     "@types/node": "^18.15.2",
     "csv-parser": "^3.0.0",
@@ -22,8 +22,5 @@
     "glob": "^8.1.0",
     "ts": "^0.2.2",
     "ts-node": "^10.9.1"
-  },
-  "devDependencies": {
-    "node": "^16.6.1"
   }
 }
