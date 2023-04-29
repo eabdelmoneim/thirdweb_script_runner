@@ -29,28 +29,30 @@ const run = async () => {
   );
 
   const contract = await sdk.getContract(
-    "0xF52900bDa78e495F4a5E2384d822B7cCcF1c13F0"
+    process.env.CONTRACT_ADDRESS as string
   );
 
   let encodedFnData: string[] = [];
   // Loop through transaction batches
-  for (let c = 0; c < transactionCount; c++) {
-    for (let i = 0; i < MAX_PER_TXN; i++) {
+  for (let c = 0; c < 1; c++) {
+    for (let i = 0; i < 1; i++) {
       // get current result count and break if about to out of bounds
-      const current = c * MAX_PER_TXN + i;
-      if (current === results.length) break;
+     const current = c * MAX_PER_TXN + i;
+     if (current === results.length) break;
 
-      const claim1 = await contract.erc721.getClaimTransaction(
-        results[current].address,
-        results[current].quantity
+      const claim1 = await contract.erc721.claimTo.prepare(
+        "0xeAa5a7D7fA42CBAff443FE1BDB764E608E039F97",
+        1
       );
-      encodedFnData.push(await claim1.encodeFunctionData());
+      console.log(claim1);
+      encodedFnData.push(await claim1.encode());
+      console.log(encodedFnData)
     }
     // Call the multicall function with the encoded function data
-    const batchTx = await contract.call("multicall", encodedFnData);
+    const batchTx = await contract.call("multicall", [encodedFnData]);
     console.log(batchTx);
     encodedFnData = [];
-  }
+   }
 };
 
 // Load CSV and run file
