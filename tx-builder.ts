@@ -15,13 +15,13 @@ const run = async () => {
   );
 
   const contract = await sdk.getContract(
-    "0x4F08749EaDf5edd0e6Ff0481fB1BF0a8A54B6be0"
+    "0xea57a08Ed051d72DEE5626918B8620008B1B2EA0"
   );
 
   console.log("got contract");
 
   const metadataWithSupply = [{
-    supply: 200, // The number of this NFT you want to mint
+    supply: 500, // The number of this NFT you want to mint
     metadata: {
       name: "Cool NFT #1",
       description: "This is a cool NFT",
@@ -31,9 +31,13 @@ const run = async () => {
   
   
 
-  const tx = await contract.erc1155.mintBatch.prepare(metadataWithSupply);
-  const gasCost = tx.estimateGasCost();
-  console.log("1155 gas cost", gasCost);
+  const tx = await contract.erc1155.claim.prepare(0,500);
+  const gasCost = await tx.estimateGasCost();
+  console.log("1155 gas cost for claiming 500", gasCost);
+
+  const tx2 = await contract.erc1155.airdrop.prepare(0,[{address: "0xc3F2b2a12Eba0f5989cD75B2964E31D56603a2cE", quantity: 500}]);
+  const gasCost2 = await tx2.estimateGasCost();
+  console.log("1155 gas cost for airdrop 500", gasCost2);
 
   const metadata = {
     name: "Cool NFT",
@@ -41,12 +45,12 @@ const run = async () => {
   };
 
   // create an array of metadata objects
-  const metadataArray = Array(100).fill(metadata);
+  // const metadataArray = Array(100).fill(metadata);
 
-  const contract721 = await sdk.getContract("0x03029e52497959936249784867FB292DAD1224BD");
-  const tx721 = await contract721.erc721.mintBatch.prepare(metadataArray);
-  const gasCost721 = await tx721.estimateGasCost();
-  console.log("721 gas cost", gasCost721);
+  // const contract721 = await sdk.getContract("0x03029e52497959936249784867FB292DAD1224BD");
+  // const tx721 = await contract721.erc721.mintBatch.prepare(metadataArray);
+  // const gasCost721 = await tx721.estimateGasCost();
+  // console.log("721 gas cost", gasCost721);
 };
 run()
   .then(() => process.exit(0))

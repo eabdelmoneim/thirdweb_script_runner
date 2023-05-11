@@ -12,6 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "@thirdweb-dev/sdk": "3.10.11",
+    "@thirdweb-dev/wallets": "^0.2.19",
     "@types/glob": "^8.1.0",
     "@types/node": "^18.15.2",
     "csv-parser": "^3.0.0",
