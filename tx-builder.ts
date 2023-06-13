@@ -1,4 +1,5 @@
 import { ThirdwebSDK, NFTMetadataInput } from "@thirdweb-dev/sdk";
+import { ethers } from "ethers";
 import dotenv from "dotenv";
 
 dotenv.config();
@@ -15,7 +16,7 @@ const run = async () => {
   );
 
   const contract = await sdk.getContract(
-    "0xea57a08Ed051d72DEE5626918B8620008B1B2EA0"
+    "0x16F3cEabFFACec5a3Fc1FFE932BDF0F69DC12518"
   );
 
   console.log("got contract");
@@ -31,13 +32,13 @@ const run = async () => {
   
   
 
-  const tx = await contract.erc1155.claim.prepare(0,500);
+  const tx = await contract.erc1155.claim.prepare(0,1);
   const gasCost = await tx.estimateGasCost();
-  console.log("1155 gas cost for claiming 500", gasCost);
+  console.log("1155 gas cost for claiming 1", gasCost.wei);
 
-  const tx2 = await contract.erc1155.airdrop.prepare(0,[{address: "0xc3F2b2a12Eba0f5989cD75B2964E31D56603a2cE", quantity: 500}]);
+  const tx2 = await contract.erc1155.airdrop.prepare(0,[{address: "0xc3F2b2a12Eba0f5989cD75B2964E31D56603a2cE", quantity: 1}]);
   const gasCost2 = await tx2.estimateGasCost();
-  console.log("1155 gas cost for airdrop 500", gasCost2);
+  console.log("1155 gas cost for airdrop 1", gasCost2.wei.toNumber() / Math.pow(10,14));
 
   const metadata = {
     name: "Cool NFT",

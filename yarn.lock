@@ -968,22 +968,15 @@
     "@stablelib/random" "^1.0.2"
     "@stablelib/wipe" "^1.0.1"
 
-"@thirdweb-dev/chains@0.1.12":
-  version "0.1.12"
-  resolved "https://registry.npmjs.org/@thirdweb-dev/chains/-/chains-0.1.12.tgz"
-  integrity sha512-oF+yqeEDmeV2PJgyWD3ss+kZYjlThBmWnwnwdV7ZteAcYu0TnjqwwDFGRH6TPd+bknyby8r9UluFMlkZJpY8Vw==
-
 "@thirdweb-dev/chains@0.1.15":
   version "0.1.15"
   resolved "https://registry.npmjs.org/@thirdweb-dev/chains/-/chains-0.1.15.tgz"
   integrity sha512-7jmneTK1ExhigH5O8S5Ez7Th19SNSBQXzGsTKFOSDtdn4B7PobKNxd3O9MWtOgeSlM+54vVsDjXPHmpIAP7pAg==
 
-"@thirdweb-dev/contracts-js@1.3.3":
-  version "1.3.3"
-  resolved "https://registry.npmjs.org/@thirdweb-dev/contracts-js/-/contracts-js-1.3.3.tgz"
-  integrity sha512-P+1Yka9HUCe7FpzTEmRCMdXM2ceg3GwZ+1kLdmIQUhxwQhcHDzziCvzNvsdehF0ZRZIoLOPpyiEOKise7GCIHg==
-  dependencies:
-    "@thirdweb-dev/contracts" "3.4.6-1"
+"@thirdweb-dev/chains@0.1.20":
+  version "0.1.20"
+  resolved "https://registry.npmjs.org/@thirdweb-dev/chains/-/chains-0.1.20.tgz"
+  integrity sha512-NJo082gQIFrlaKWz4ayaHQvhZ5MILVp7U/G8bJWjxqp+YVE5RXy153BkRsd9uwTBMt4JIoxP+dwWbfWbQn9j1A==
 
 "@thirdweb-dev/contracts-js@1.3.4":
   version "1.3.4"
@@ -992,30 +985,37 @@
   dependencies:
     "@thirdweb-dev/contracts" "3.4.7-0"
 
-"@thirdweb-dev/contracts@3.4.6-1":
-  version "3.4.6-1"
-  resolved "https://registry.npmjs.org/@thirdweb-dev/contracts/-/contracts-3.4.6-1.tgz"
-  integrity sha512-v6tDS0+sTdlRJinep8nYRJlbsO7hbmIIUzEzBIYuFOxSlw/xuEO6xAfgNB8k3oc3n0NerDop2LQOfTxSVLBK6Q==
+"@thirdweb-dev/contracts-js@1.3.5":
+  version "1.3.5"
+  resolved "https://registry.npmjs.org/@thirdweb-dev/contracts-js/-/contracts-js-1.3.5.tgz"
+  integrity sha512-Nv1Ylms4ZVx+47YaoXA6TQxClk7IBJh4KPkKAVySXhiu5kNqefMEmM66cw1vJECZqOPykInvTbuMQ16e/BP2qQ==
+  dependencies:
+    "@thirdweb-dev/contracts" "3.5.5"
 
 "@thirdweb-dev/contracts@3.4.7-0":
   version "3.4.7-0"
   resolved "https://registry.npmjs.org/@thirdweb-dev/contracts/-/contracts-3.4.7-0.tgz"
   integrity sha512-yMom2CiaHuj9UZdvbG4EMq1XKAji7GfWfricgIIK+cnBwQoI1PnPwKVMko/4V/h0Jw9p3yZDL6BTscjPSlnL2Q==
 
+"@thirdweb-dev/contracts@3.5.5":
+  version "3.5.5"
+  resolved "https://registry.npmjs.org/@thirdweb-dev/contracts/-/contracts-3.5.5.tgz"
+  integrity sha512-rXbqptxsyTQQ2J9x4ZrxdLbUE8syN11/g5eGHhLQjAaUH1RzwULeAFOJmTYrCf1bg1VOxcqBbdV6tfu7FiOQEQ==
+
 "@thirdweb-dev/generated-abis@0.0.1":
   version "0.0.1"
   resolved "https://registry.npmjs.org/@thirdweb-dev/generated-abis/-/generated-abis-0.0.1.tgz"
   integrity sha512-vO9/3lSLO8smyyH1QVeYravSTzFwV1nf1C/Im1NBDPdH8//YvcbhtETGGiNfHWpyCvSi0vRYwvf+/7FKdwpDGQ==
 
-"@thirdweb-dev/sdk@3.10.11":
-  version "3.10.11"
-  resolved "https://registry.npmjs.org/@thirdweb-dev/sdk/-/sdk-3.10.11.tgz"
-  integrity sha512-C/GahvSd5Anw2JHnTK5n9oEAnwE3J5AKnoIR5FZelOgeMYgkCdoc4JzxAUb9nqraoRBqdqJtO3ssWqiEgpU9WQ==
+"@thirdweb-dev/sdk@^3.10.21":
+  version "3.10.21"
+  resolved "https://registry.npmjs.org/@thirdweb-dev/sdk/-/sdk-3.10.21.tgz"
+  integrity sha512-f2wL8U6YkoJzL5zGcPTpMOPlWnI+hXgNhcWKa8NA7SJdmOqiWvCSMGWC8vk8slWK8w+gnxoOZWooJkpGZLlfRg==
   dependencies:
-    "@thirdweb-dev/chains" "0.1.12"
-    "@thirdweb-dev/contracts-js" "1.3.3"
+    "@thirdweb-dev/chains" "0.1.20"
+    "@thirdweb-dev/contracts-js" "1.3.5"
     "@thirdweb-dev/generated-abis" "0.0.1"
-    "@thirdweb-dev/storage" "1.1.2"
+    "@thirdweb-dev/storage" "1.1.4"
     abitype "^0.2.5"
     bn.js "^5.2.1"
     bs58 "^5.0.0"
@@ -1057,6 +1057,16 @@
   version "1.1.2"
   resolved "https://registry.npmjs.org/@thirdweb-dev/storage/-/storage-1.1.2.tgz"
   integrity sha512-l5cNliQ/BuoYjCouWR0lJ97ByJVNksKKoDuPaI6rTZuMXNEgJliTa2M5nyjM8FKK6GnykcEvAEzB2g4sar3NxA==
+  dependencies:
+    cross-fetch "^3.1.5"
+    form-data "^4.0.0"
+    ipfs-unixfs-importer "^7.0.1"
+    uuid "^9.0.0"
+
+"@thirdweb-dev/storage@1.1.4":
+  version "1.1.4"
+  resolved "https://registry.npmjs.org/@thirdweb-dev/storage/-/storage-1.1.4.tgz"
+  integrity sha512-mNcC0nWwR5u7g+bTCyQEeWqtL7n18tK+iKREYxCIUkLUR22C0kkRkPyW9iapmHqiXW0Q22dfBw5xIQ12Wvq5ZA==
   dependencies:
     cross-fetch "^3.1.5"
     form-data "^4.0.0"
@@ -1802,6 +1812,11 @@ bn.js@^4.11.9:
   resolved "https://registry.npmjs.org/bn.js/-/bn.js-4.12.0.tgz"
   integrity sha512-c98Bf3tPniI+scsdk237ku1Dc3ujXQTSgyiPUDEOe7tRkhrqridvh8klBv0HCEso1OLOYcHuCv/cS6DNxKH+ZA==
 
+bn.js@^4.4.0:
+  version "4.12.0"
+  resolved "https://registry.npmjs.org/bn.js/-/bn.js-4.12.0.tgz"
+  integrity sha512-c98Bf3tPniI+scsdk237ku1Dc3ujXQTSgyiPUDEOe7tRkhrqridvh8klBv0HCEso1OLOYcHuCv/cS6DNxKH+ZA==
+
 bn.js@^5.0.0, bn.js@^5.1.1, bn.js@^5.1.2, bn.js@^5.2.0, bn.js@^5.2.1:
   version "5.2.1"
   resolved "https://registry.npmjs.org/bn.js/-/bn.js-5.2.1.tgz"
@@ -2534,6 +2549,16 @@ ethereumjs-util@^7.1.0, ethereumjs-util@^7.1.5:
     ethereum-cryptography "^0.1.3"
     rlp "^2.2.4"
 
+ethers-utils@^2.1.11:
+  version "2.1.11"
+  resolved "https://registry.npmjs.org/ethers-utils/-/ethers-utils-2.1.11.tgz"
+  integrity sha512-BfkGStBmmLjhTldmp5lifiwUeDjx/yowoWfmUnnvPNsix5PFE8IXQdY5VT/Qo1SXMgxzCe8m0Z8ysUw6Q9OmAw==
+  dependencies:
+    bn.js "^4.4.0"
+    hash.js "^1.0.0"
+    js-sha3 "0.5.7"
+    xmlhttprequest "1.8.0"
+
 ethers@^5, ethers@^5.7.0, ethers@^5.7.2, ethers@5.7.2:
   version "5.7.2"
   resolved "https://registry.npmjs.org/ethers/-/ethers-5.7.2.tgz"
@@ -3176,6 +3201,11 @@ js-sha3@^0.8.0, js-sha3@0.8.0:
   version "0.8.0"
   resolved "https://registry.npmjs.org/js-sha3/-/js-sha3-0.8.0.tgz"
   integrity sha512-gF1cRrHhIzNfToc802P800N8PpXS+evLLXfsVpowqmAFR9uwbi89WvXg2QspOmXL8QL86J4T1EpFu+yUkwJY3Q==
+
+js-sha3@0.5.7:
+  version "0.5.7"
+  resolved "https://registry.npmjs.org/js-sha3/-/js-sha3-0.5.7.tgz"
+  integrity sha512-GII20kjaPX0zJ8wzkTbNDYMY7msuZcTWk8S5UOh6806Jq/wz1J8/bnr8uGU0DAUmYDjj2Mr4X1cW8v/GLYnR+g==
 
 "js-tokens@^3.0.0 || ^4.0.0", js-tokens@^4.0.0:
   version "4.0.0"
@@ -4983,6 +5013,11 @@ xhr2-cookies@1.1.0:
   integrity sha512-hjXUA6q+jl/bd8ADHcVfFsSPIf+tyLIjuO9TwJC9WI6JP2zKcS7C+p56I9kCLLsaCiNT035iYvEUUzdEFj/8+g==
   dependencies:
     cookiejar "^2.1.1"
+
+xmlhttprequest@1.8.0:
+  version "1.8.0"
+  resolved "https://registry.npmjs.org/xmlhttprequest/-/xmlhttprequest-1.8.0.tgz"
+  integrity sha512-58Im/U0mlVBLM38NdZjHyhuMtCqa61469k2YP/AaPbvCoV9aQGUpbJBj1QRm2ytRiVQBD/fsw7L2bJGDVQswBA==
 
 xtend@^4.0.0, xtend@^4.0.1:
   version "4.0.2"
