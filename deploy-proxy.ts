@@ -18,7 +18,7 @@ const main = async () => {
     console.log("Running on", chain.slug, "with clone factory", cloneFactoryAddress);
     
     const sdk = ThirdwebSDK.fromPrivateKey(testPrivateKey, chain);
-
+sdk.deployer.deployReleasedContract
     const cloneFactory = await sdk.getContract(cloneFactoryAddress);
 
     const tx = await cloneFactory.call(
