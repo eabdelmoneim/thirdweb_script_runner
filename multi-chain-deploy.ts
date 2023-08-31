@@ -42,7 +42,7 @@ const main = async () => {
       //     publishedContractConstructorArguments
       //   );
 
-      const deployedAddress = await sdk.deployer.deployBuiltInContract("nft-drop",{name: "MyMulti NFT", primary_sale_recipient: "0xc3F2b2a12Eba0f5989cD75B2964E31D56603a2cE"},"latest",{saltForProxyDeploy: "eabdelmoneim"})
+      const deployedAddress = await sdk.deployer.deployBuiltInContract("token",{name: "MyToken", primary_sale_recipient: "0xc3F2b2a12Eba0f5989cD75B2964E31D56603a2cE"},"latest",{saltForProxyDeploy: "eabdelmoneim"})
       console.log(
         "--> succesfully deployed on",
         chain.slug,
