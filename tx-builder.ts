@@ -16,7 +16,7 @@ const run = async () => {
   );
 
   const contract = await sdk.getContract(
-    "0x16F3cEabFFACec5a3Fc1FFE932BDF0F69DC12518"
+    "0xcd7806bB7aEe3dc8F61c27587a06e5b338544dD7"
   );
 
   console.log("got contract");
@@ -28,9 +28,6 @@ const run = async () => {
       description: "This is a cool NFT",
     },
   },];
-
-  
-  
 
   const tx = await contract.erc1155.claim.prepare(0,1);
   const gasCost = await tx.estimateGasCost();
