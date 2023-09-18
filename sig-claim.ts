@@ -1,5 +1,6 @@
 import { ThirdwebSDK, NFTMetadataInput } from "@thirdweb-dev/sdk";
 import dotenv from "dotenv";
+import {utils} from "ethers"
 
 dotenv.config();
 
@@ -11,21 +12,20 @@ const run = async () => {
 
   const sdk = ThirdwebSDK.fromPrivateKey(
     PRIVATE_KEY, // Your wallet private key
-    network // configure this to your network
+    network, // configure this to your network
+    {secretKey: process.env.THIRDWEB_SECRET_KEY as string}
   );
 
-  const contract = await sdk.getContract(
-    process.env.THIRDWEB_CONTRACT_ADDRESS as string
-  );
+  const contract = await sdk.getContract("0x4d2Dd3641e93dcF142c1a4bDeD5CC65344d8e9C6");
 
   console.log("got contract");
 
   const payload = await contract.erc721.signature.generate({
     to: "0xeAa5a7D7fA42CBAff443FE1BDB764E608E039F97",
-    metadata: "https://storage.googleapis.com/fractal-mint-public-assets/5687010538815488/8jq7yWQ2GZDnHNsiBfmPbnLM3MvCoZeiZC5nZefxSLuR/metadata.json",
     quantity: 1,
     currencyAddress: "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE",
     price: 0,
+    uid: utils.solidityKeccak256(["address"],["0xeAa5a7D7fA42CBAff443FE1BDB764E608E039F97"]).toString(),
   });
   console.log(payload);
 

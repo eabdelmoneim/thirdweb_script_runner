@@ -12,7 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "@thirdweb-dev/chains": "^0.1.50",
-    "@thirdweb-dev/sdk": "^3.10.58",
+    "@thirdweb-dev/sdk": "^3.10.59",
     "@thirdweb-dev/wallets": "^0.2.26",
     "@types/glob": "^8.1.0",
     "@types/node": "^18.15.2",
@@ -24,6 +24,7 @@
     "fs.promises": "^0.1.2",
     "glob": "^8.1.0",
     "ts": "^0.2.2",
-    "ts-node": "^10.9.1"
+    "ts-node": "^10.9.1",
+    "web3-utils": "^4.0.5"
   }
 }
