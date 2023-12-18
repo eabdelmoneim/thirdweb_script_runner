@@ -1,16 +1,17 @@
 
-import { ContractEvent, ThirdwebSDK } from '@thirdweb-dev/sdk';
-import { XaiGoerliOrbit, Base } from "@thirdweb-dev/chains";
+import { ContractEvent, ThirdwebSDK, NATIVE_TOKEN_ADDRESS, getNativeTokenByChainId, resolveAddress} from '@thirdweb-dev/sdk';
+import { XaiGoerliOrbit, Base, XplaTestnet, AvalancheFuji, Polygon, Mumbai} from "@thirdweb-dev/chains";
 import dotenv from "dotenv";
+import { resolve } from 'path';
 
 dotenv.config();
 
 const run = async () => {
     console.log("apiKey: " + process.env.THIRDWEB_SECRET_KEY as string);
-    const sdk = new ThirdwebSDK(Base,{secretKey: process.env.THIRDWEB_SECRET_KEY as string});
+    const sdk = ThirdwebSDK.fromPrivateKey(process.env.KEY as string, Mumbai,{secretKey: process.env.THIRDWEB_SECRET_KEY as string});
 
-    const contract = await sdk.getContract('0x918144e4916eb656db48f38329d72517a810f702');
-    console.log("contract: " + contract.getAddress());
+    const contract = await sdk.getContract('0xDf750F2e93AdDB6ED5b8D9F615916C01ca475fc1');
+    // console.log("contract: " + contract.getAddress());
 
 // get all the tokens claimed events
 //const claimedEvents: ContractEvent[] = await contract.events.getEvents("RoleRevoked");
@@ -22,9 +23,9 @@ const run = async () => {
 
   const events = await contract.events.getAllEvents();
   
-  //   // loop over events and print out the event name and data
+    // loop over events and print out the event name and data
     for (const event of events) {
-      if(event.eventName.startsWith("Claim")){
+      if(event.eventName.startsWith("Extension")){
       console.log(event);
       }
       // if event name starts with "Claim Conditions" then print it out

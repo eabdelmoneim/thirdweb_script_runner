@@ -6,16 +6,31 @@ dotenv.config();
 const run = async () => {
   // Instantiate thirdweb SDK for read/write
   // PRIVATE_KEY should be put into environment variable
-  const PRIVATE_KEY = process.env.KEY as string;
+  const PRIVATE_KEY = process.env.M_WALLET_KEY as string;
   const delayedRevealPassword = process.env.DELAYED_REVEAL_PASSWORD as string;
 
   const sdk = ThirdwebSDK.fromPrivateKey(
     PRIVATE_KEY, // Your wallet private key
-    "goerli" // configure this to your network
+    "forketh",
+
+    {
+      supportedChains: [{
+        chainId: 1,
+        rpc: ["https://rpc-1.eth.bio/"],
+        nativeCurrency: {
+          name: "ETH",
+          symbol: "ETH",
+          decimals: 18,
+        },
+        slug: "forketh",
+      }],
+      secretKey: process.env.THIRDWEB_SECRET_KEY as string,
+      
+    }
   );
 
   const contract = await sdk.getContract(
-    "0x74c6340f456d2839239f882707A242B3A2D09FDb"
+    "0x6FF54EF8d9860552950FF3843044E36E41e9D2eF"
   );
 
   const placeholderMetadata = {
@@ -66,17 +81,17 @@ const run = async () => {
     },
   ];
 
-  console.log("lazy minting DREAMER");
-  const dreamerTx = await contract.erc721.tieredDrop.createBatchWithTier(
-    dreamerMetadata,
-    "dreamer"
-  );
-  /* const dreamerTx = await contract.erc721.tieredDrop.createDelayedRevealBatchWithTier(
+  // console.log("lazy minting DREAMER");
+  // const dreamerTx = await contract.erc721.tieredDrop.createBatchWithTier(
+  //   dreamerMetadata,
+  //   "dreamer"
+  // );
+  const dreamerTx = await contract.erc721.tieredDrop.createDelayedRevealBatchWithTier(
     placeholderMetadata,
     dreamerMetadata,
     delayedRevealPassword,
     "dreamer"
-  ); */
+  );
 
   console.log(dreamerTx);
 
@@ -124,16 +139,16 @@ const run = async () => {
   ];
 
   console.log("lazy minting BUILDER");
-  const builderTx = await contract.erc721.tieredDrop.createBatchWithTier(
-    builderMetadata,
-    "builder"
-  );
-  /* const builderTx = await contract.erc721.tieredDrop.createDelayedRevealBatchWithTier(
+  // const builderTx = await contract.erc721.tieredDrop.createBatchWithTier(
+  //   builderMetadata,
+  //   "builder"
+  // );
+  const builderTx = await contract.erc721.tieredDrop.createDelayedRevealBatchWithTier(
     placeholderMetadata,
     builderMetadata,
     delayedRevealPassword,
     "builder"
-  ); */
+  );
   console.log(builderTx);
 
   const angelMetadata = [
@@ -180,16 +195,16 @@ const run = async () => {
   ];
 
   console.log("lazy minting ANGEL");
-  const angelTx = await contract.erc721.tieredDrop.createBatchWithTier(
-    angelMetadata,
-    "angel"
-  );
-  /* const angelTx = await contract.erc721.tieredDrop.createDelayedRevealBatchWithTier(
+  // const angelTx = await contract.erc721.tieredDrop.createBatchWithTier(
+  //   angelMetadata,
+  //   "angel"
+  // );
+  const angelTx = await contract.erc721.tieredDrop.createDelayedRevealBatchWithTier(
     placeholderMetadata,
     angelMetadata,
     delayedRevealPassword,
     "angel"
-  ); */
+  );
   console.log(angelTx);
 
   const neoMetadata = [
@@ -236,16 +251,16 @@ const run = async () => {
   ];
 
   console.log("lazy minting NEO-CAPITALIST");
-  const neoTx = await contract.erc721.tieredDrop.createBatchWithTier(
-    neoMetadata,
-    "neo-capitalist"
-  );
-  /* const neoTx = await contract.erc721.tieredDrop.createDelayedRevealBatchWithTier(
+  // const neoTx = await contract.erc721.tieredDrop.createBatchWithTier(
+  //   neoMetadata,
+  //   "neo-capitalist"
+  // );
+  const neoTx = await contract.erc721.tieredDrop.createDelayedRevealBatchWithTier(
     placeholderMetadata,
     neoMetadata,
     delayedRevealPassword,
     "neo-capitalist"
-  ); */
+  );
   console.log(neoTx);
 
   const connectorMetadata = [

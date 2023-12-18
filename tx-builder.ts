@@ -1,6 +1,7 @@
 import { ThirdwebSDK, NFTMetadataInput } from "@thirdweb-dev/sdk";
 import { ethers } from "ethers";
 import dotenv from "dotenv";
+import { Arbitrum } from "@thirdweb-dev/chains";
 
 dotenv.config();
 
@@ -8,7 +9,7 @@ const run = async () => {
   // Instantiate thirdweb SDK for read/write
   // PRIVATE_KEY should be put into environment variable
   const PRIVATE_KEY = process.env.THIRDWEB_ADMIN_PRIVATE_KEY as string;
-  const network = process.env.THIRDWEB_NETWORK as string;
+  const network = Arbitrum;
 
   const sdk = ThirdwebSDK.fromPrivateKey(
     PRIVATE_KEY, // Your wallet private key
