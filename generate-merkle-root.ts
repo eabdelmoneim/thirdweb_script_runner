@@ -10,12 +10,13 @@ const run = async () => {
 
     const leaves = [utils.solidityKeccak256(
         ["uint256", "address"],
-        ["53", "0x749CaA9A7bbF7D5aEb8Ea6E92335AFa2f74dE4EE"] // update this
+        ["53", "0xF170cE3dBd0Eb52bcfBb016a96Cf8532FdEc5d52"] // update this
     )];
     const tree = new MerkleTree(leaves, utils.keccak256, { sort: true });
     const root = tree.getHexRoot();
     const proof = tree.getHexProof(leaves[0]);
     console.log(root)
+    console.log(proof);
 
 };
 run()
