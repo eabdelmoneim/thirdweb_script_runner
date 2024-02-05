@@ -964,7 +964,7 @@
   dependencies:
     buffer "~6.0.3"
 
-"@solana/web3.js@^1.30.2", "@solana/web3.js@^1.70.1":
+"@solana/web3.js@^1.30.2", "@solana/web3.js@^1.62.0", "@solana/web3.js@^1.70.1":
   version "1.87.5"
   resolved "https://registry.npmjs.org/@solana/web3.js/-/web3.js-1.87.5.tgz"
   integrity sha512-hy5RVGVw8eXq//g41mIFhk5Jx4QH1CwbkPiQn/3MmHp6VD2HBRVMMZUSGUhYZxbK7NoIjQUsiv4MOlnl3VaUag==
@@ -1133,15 +1133,22 @@
   dependencies:
     defer-to-connect "^2.0.1"
 
-"@thirdweb-dev/chains@^0.1.68", "@thirdweb-dev/chains@0.1.68":
-  version "0.1.68"
-  resolved "https://registry.npmjs.org/@thirdweb-dev/chains/-/chains-0.1.68.tgz"
-  integrity sha512-4+gZYW93Uf/Vc9hIHe/0hCT5xJgENapXS/T1U74UfbysTi+kqGW3mxLoQoS5pbas0szQrQNDFN/xVIp+3WpR1w==
+"@thirdweb-dev/chains@^0.1.70", "@thirdweb-dev/chains@0.1.70":
+  version "0.1.70"
+  resolved "https://registry.npmjs.org/@thirdweb-dev/chains/-/chains-0.1.70.tgz"
+  integrity sha512-VP+JE70wNpbFa0rnKifTxxCXZwbKROf54z7qclxfb9tT1SY0/aIhVee0PYSxPXMd82NTkFkEidGFWS7TbYoldg==
 
-"@thirdweb-dev/chains@0.1.69":
-  version "0.1.69"
-  resolved "https://registry.npmjs.org/@thirdweb-dev/chains/-/chains-0.1.69.tgz"
-  integrity sha512-X7Gj5H9G4/gQ3p1k79wKcu8dh7nzUC4VOzYeiflsznL+LzSmY3MHmSI6Gc6fu4c2eorYM/9wZZ1oZcsPLH/ifQ==
+"@thirdweb-dev/chains@0.1.42":
+  version "0.1.42"
+  resolved "https://registry.npmjs.org/@thirdweb-dev/chains/-/chains-0.1.42.tgz"
+  integrity sha512-wnjj6YwEZs+i6gPDQQUDd5TJmUEXxBReS85Cg4DFnJB4nFWQSMx3z6BZiOEm35oK82I8p5ILP2cgYHzzzpsvMw==
+
+"@thirdweb-dev/contracts-js@1.3.11":
+  version "1.3.11"
+  resolved "https://registry.npmjs.org/@thirdweb-dev/contracts-js/-/contracts-js-1.3.11.tgz"
+  integrity sha512-Qh7vEt7egILk7QHbl9y8Yi78MNP+JGogA/g2+Ybr8mY2vZB2I8zpyyHKC60fwMaoGanvm+mIThFCIDXCnmz2Aw==
+  dependencies:
+    "@thirdweb-dev/contracts" "3.8.3"
 
 "@thirdweb-dev/contracts-js@1.3.16":
   version "1.3.16"
@@ -1160,6 +1167,11 @@
     "@openzeppelin/contracts-upgradeable" "4.7.3"
     "@thirdweb-dev/dynamic-contracts" "^1.1.2"
     erc721a-upgradeable "^3.3.0"
+
+"@thirdweb-dev/contracts@3.8.3":
+  version "3.8.3"
+  resolved "https://registry.npmjs.org/@thirdweb-dev/contracts/-/contracts-3.8.3.tgz"
+  integrity sha512-J1CRG8bZ/Y9x7jgd0kmu0LDgV3l+s6wBO/ohCJeOamxuXp9ubYMXr1DFmFHnNphmEHnQfLt459nu8qwGJ9ip6Q==
 
 "@thirdweb-dev/crypto@0.2.0":
   version "0.2.0"
@@ -1194,12 +1206,35 @@
     buffer-reverse "^1.0.1"
     treeify "^1.1.0"
 
-"@thirdweb-dev/sdk@0.0.0-dev-877ea22-20240202010008":
-  version "0.0.0-dev-877ea22-20240202010008"
-  resolved "https://registry.npmjs.org/@thirdweb-dev/sdk/-/sdk-0.0.0-dev-877ea22-20240202010008.tgz"
-  integrity sha512-gbEiBke32YKd63ysS9+6TXQwW71glRFjPcqOzFTHBJL0OHQMqQces9MBVB5NqIlLxT2XSqRtCrq1RLQU0uAYqw==
+"@thirdweb-dev/sdk@3.10.47":
+  version "3.10.47"
+  resolved "https://registry.npmjs.org/@thirdweb-dev/sdk/-/sdk-3.10.47.tgz"
+  integrity sha512-NwZ4kdZOn+2DsLAGNIuJG0ScEG9Pr8fPIIeoZ+Dhun1iZRiG7bQxww99XoarM0bsTG/gglTEswC0GZmbkHcUCw==
   dependencies:
-    "@thirdweb-dev/chains" "0.1.69"
+    "@thirdweb-dev/chains" "0.1.42"
+    "@thirdweb-dev/contracts-js" "1.3.11"
+    "@thirdweb-dev/generated-abis" "0.0.1"
+    "@thirdweb-dev/storage" "1.2.4"
+    abitype "^0.2.5"
+    bn.js "^5.2.1"
+    bs58 "^5.0.0"
+    buffer "^6.0.3"
+    cross-fetch "^3.1.8"
+    eventemitter3 "^5.0.1"
+    fast-deep-equal "^3.1.3"
+    merkletreejs "^0.2.24"
+    tiny-invariant "^1.2.0"
+    tweetnacl "^1.0.3"
+    uuid "^9.0.0"
+    yaml "^2.3.1"
+    zod "^3.20.2"
+
+"@thirdweb-dev/sdk@4.0.33":
+  version "4.0.33"
+  resolved "https://registry.npmjs.org/@thirdweb-dev/sdk/-/sdk-4.0.33.tgz"
+  integrity sha512-sR4xq/oJN/HR7FJDRG2NBOz6FZlX1/7bHMuvz/3sZ15uoBqrPMqashSTvo7PFq2noDPJY5XXOni/MTv0iGDSLQ==
+  dependencies:
+    "@thirdweb-dev/chains" "0.1.70"
     "@thirdweb-dev/contracts-js" "1.3.16"
     "@thirdweb-dev/crypto" "0.2.0"
     "@thirdweb-dev/generated-abis" "0.0.1"
@@ -1217,28 +1252,15 @@
     yaml "^2.3.1"
     zod "^3.22.3"
 
-"@thirdweb-dev/sdk@4.0.31":
-  version "4.0.31"
-  resolved "https://registry.npmjs.org/@thirdweb-dev/sdk/-/sdk-4.0.31.tgz"
-  integrity sha512-cZe2K8rwbmtk3sfQgdRw9N93eHQdYZQUR7TIK9wwCR57w+ZhcybPQCyBJW1Kk5EGr4BEc/6oyW5SQgHtB5Rbpg==
+"@thirdweb-dev/storage@1.2.4":
+  version "1.2.4"
+  resolved "https://registry.npmjs.org/@thirdweb-dev/storage/-/storage-1.2.4.tgz"
+  integrity sha512-8428crrPXnFCbOp2KUpy2h1e58uea6ccWB5tWH83jgeIdtqOAT6EL9NYRU9pJsaskFU8mHuc64U7Ys6W0xqvdw==
   dependencies:
-    "@thirdweb-dev/chains" "0.1.68"
-    "@thirdweb-dev/contracts-js" "1.3.16"
-    "@thirdweb-dev/crypto" "0.2.0"
-    "@thirdweb-dev/generated-abis" "0.0.1"
-    "@thirdweb-dev/merkletree" "0.2.0"
-    "@thirdweb-dev/storage" "2.0.9"
-    abitype "^0.2.5"
-    bn.js "^5.2.1"
-    bs58 "^5.0.0"
-    buffer "^6.0.3"
-    eventemitter3 "^5.0.1"
-    fast-deep-equal "^3.1.3"
-    tiny-invariant "^1.2.0"
-    tweetnacl "^1.0.3"
-    uuid "^9.0.1"
-    yaml "^2.3.1"
-    zod "^3.22.3"
+    cid-tool "^3.0.0"
+    cross-fetch "^3.1.8"
+    form-data "^4.0.0"
+    uuid "^9.0.0"
 
 "@thirdweb-dev/storage@2.0.9":
   version "2.0.9"
@@ -1250,10 +1272,10 @@
     form-data "^4.0.0"
     uuid "^9.0.1"
 
-"@thirdweb-dev/wallets@^2.4.6":
-  version "2.4.6"
-  resolved "https://registry.npmjs.org/@thirdweb-dev/wallets/-/wallets-2.4.6.tgz"
-  integrity sha512-Td3CgDmgEyr5amGNFUUFTjlFWqossYxvAv9Uy+rE4EFZ/8XIZ//jI1AT/LRMkwEREibGJkqWD8jMejVOJIHNlA==
+"@thirdweb-dev/wallets@^2.4.8":
+  version "2.4.8"
+  resolved "https://registry.npmjs.org/@thirdweb-dev/wallets/-/wallets-2.4.8.tgz"
+  integrity sha512-oBd4F47ZpFnKz8+eEIBjujdevAQ13fMWXIk0ZxrEui7ivVL9tConPdl5FXjlGQc+ufoBSt+S7bdnYCvWFjmYoA==
   dependencies:
     "@account-abstraction/contracts" "^0.5.0"
     "@blocto/sdk" "^0.5.4"
@@ -1267,10 +1289,10 @@
     "@paperxyz/sdk-common-utilities" "^0.1.0"
     "@safe-global/protocol-kit" "1.3.0"
     "@safe-global/safe-ethers-adapters" "0.1.0-alpha.17"
-    "@thirdweb-dev/chains" "0.1.68"
+    "@thirdweb-dev/chains" "0.1.70"
     "@thirdweb-dev/contracts-js" "1.3.16"
     "@thirdweb-dev/crypto" "0.2.0"
-    "@thirdweb-dev/sdk" "4.0.31"
+    "@thirdweb-dev/sdk" "4.0.33"
     "@walletconnect/core" "^2.9.1"
     "@walletconnect/ethereum-provider" "^2.9.1"
     "@walletconnect/jsonrpc-utils" "^1.0.8"
@@ -2098,7 +2120,7 @@ bigint-buffer@^1.1.5:
   dependencies:
     bindings "^1.3.0"
 
-bignumber.js@^9.0.0:
+bignumber.js@^9.0.0, bignumber.js@^9.0.1:
   version "9.1.0"
   resolved "https://registry.npmjs.org/bignumber.js/-/bignumber.js-9.1.0.tgz"
   integrity sha512-4LwHK4nfDOraBCtst+wOWIHbu1vhvAPJK8g8nROd4iuc3PSEjWif/qwbkh8jwCJz6yDBvtU4KPynETgrfh7y3A==
@@ -2654,7 +2676,7 @@ create-require@^1.1.0:
   resolved "https://registry.npmjs.org/create-require/-/create-require-1.1.1.tgz"
   integrity sha512-dcKFX3jn0MpIaXjisoRvexIJVEKzaq7z2rZKxf+MSr9TkdmHmsU4m2lcLojrj/FHl8mk5VxMmYA+ftRkP/3oKQ==
 
-cross-fetch@^3.1.4:
+cross-fetch@^3.1.4, cross-fetch@^3.1.8:
   version "3.1.8"
   resolved "https://registry.npmjs.org/cross-fetch/-/cross-fetch-3.1.8.tgz"
   integrity sha512-cvA+JwZoU0Xq+h6WkMvAUqPEYy92Obet6UdKLfW60qn99ftItKjB5T+BkyWOFWe2pUyfQ+IJHmpOTznqk1M6Kg==
@@ -2667,6 +2689,11 @@ cross-fetch@^4.0.0:
   integrity sha512-e4a5N8lVvuLgAWgnCrLr2PP0YyDOTHa9H/Rj54dirp61qXnNq46m82bRhNqIA5VccJtWBvPTFRV3TtvHUKPB1g==
   dependencies:
     node-fetch "^2.6.12"
+
+crypto-js@^3.1.9-1:
+  version "3.3.0"
+  resolved "https://registry.npmjs.org/crypto-js/-/crypto-js-3.3.0.tgz"
+  integrity sha512-DIT51nX0dCfKltpRiXV+/TVZq+Qq2NgF4644+K7Ttnla7zEzqc+kjJyiB96BHNyUTBxyjzRcZYpUdZa+QAqi6Q==
 
 csv-parser@^3.0.0:
   version "3.0.0"
@@ -4479,6 +4506,17 @@ merge-descriptors@1.0.1:
   version "1.0.1"
   resolved "https://registry.npmjs.org/merge-descriptors/-/merge-descriptors-1.0.1.tgz"
   integrity sha512-cCi6g3/Zr1iqQi6ySbseM1Xvooa98N0w31jzUYrXPX2xqObmFGHJ0tQ5u74H3mVh7wLouTseZyYIq39g8cNp1w==
+
+merkletreejs@^0.2.24:
+  version "0.2.32"
+  resolved "https://registry.npmjs.org/merkletreejs/-/merkletreejs-0.2.32.tgz"
+  integrity sha512-TostQBiwYRIwSE5++jGmacu3ODcKAgqb0Y/pnIohXS7sWxh1gCkSptbmF1a43faehRDpcHf7J/kv0Ml2D/zblQ==
+  dependencies:
+    bignumber.js "^9.0.1"
+    buffer-reverse "^1.0.1"
+    crypto-js "^3.1.9-1"
+    treeify "^1.1.0"
+    web3-utils "^1.3.4"
 
 methods@~1.1.2:
   version "1.1.2"
@@ -6484,6 +6522,20 @@ web3-types@^1.1.1:
   resolved "https://registry.npmjs.org/web3-types/-/web3-types-1.1.1.tgz"
   integrity sha512-bXmIPJi/NPed43JBcya71gT+euZSMvfQx6NYv8G97PSNxR1HWwANYBKbamTZvzBbq10QCwQLh0hZw3tyOXuPFA==
 
+web3-utils@^1.3.4:
+  version "1.10.3"
+  resolved "https://registry.npmjs.org/web3-utils/-/web3-utils-1.10.3.tgz"
+  integrity sha512-OqcUrEE16fDBbGoQtZXWdavsPzbGIDc5v3VrRTZ0XrIpefC/viZ1ZU9bGEemazyS0catk/3rkOOxpzTfY+XsyQ==
+  dependencies:
+    "@ethereumjs/util" "^8.1.0"
+    bn.js "^5.2.1"
+    ethereum-bloom-filters "^1.0.6"
+    ethereum-cryptography "^2.1.2"
+    ethjs-unit "0.1.6"
+    number-to-bn "1.7.0"
+    randombytes "^2.1.0"
+    utf8 "3.0.0"
+
 web3-utils@^1.8.1, web3-utils@1.10.3:
   version "1.10.3"
   resolved "https://registry.npmjs.org/web3-utils/-/web3-utils-1.10.3.tgz"
@@ -6822,7 +6874,7 @@ zksync-web3@^0.14.3:
   resolved "https://registry.npmjs.org/zksync-web3/-/zksync-web3-0.14.4.tgz"
   integrity sha512-kYehMD/S6Uhe1g434UnaMN+sBr9nQm23Ywn0EUP5BfQCsbjcr3ORuS68PosZw8xUTu3pac7G6YMSnNHk+fwzvg==
 
-zod@^3.21.4, zod@^3.22.3, zod@>=3.19.1:
+zod@^3.20.2, zod@^3.21.4, zod@^3.22.3, zod@>=3.19.1:
   version "3.22.4"
   resolved "https://registry.npmjs.org/zod/-/zod-3.22.4.tgz"
   integrity sha512-iC+8Io04lddc+mVqQ9AZ7OQ2MrUKGN+oIQyq1vemgt46jwCwLfhq7/pwnBnNXXXZb8VTVLKwp9EDkx+ryxIWmg==
