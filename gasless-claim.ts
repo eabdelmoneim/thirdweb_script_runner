@@ -1,5 +1,5 @@
-import { ThirdwebSDK, getDefaultTrustedForwarders, predictThirdwebContractAddress } from "@thirdweb-dev/sdk";
-import { Mumbai} from "@thirdweb-dev/chains";
+import { ThirdwebSDK } from "@thirdweb-dev/sdk";
+import { Mumbai} from "@thirdweb-dev/chains"; 
 import dotenv from "dotenv";
 
 dotenv.config();

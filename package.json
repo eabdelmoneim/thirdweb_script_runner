@@ -24,6 +24,7 @@
     "fs": "^0.0.1-security",
     "fs.promises": "^0.1.2",
     "glob": "^8.1.0",
+    "thirdweb": "^1.0.0-alpha-770b0d64f2a71b2b00fca095e7a66c27fc5c7793-20240226173444",
     "ts": "^0.2.2",
     "ts-node": "^10.9.1",
     "web3-utils": "^4.0.5"
