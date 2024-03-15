@@ -9,8 +9,8 @@ dotenv.config();
 const run = async () => {
 
     const leaves = [utils.solidityKeccak256(
-        ["uint256", "address"],
-        ["53", "0xF170cE3dBd0Eb52bcfBb016a96Cf8532FdEc5d52"] // update this
+        ["address", "uint256"],
+        ["0xF170cE3dBd0Eb52bcfBb016a96Cf8532FdEc5d52","2"] // address and amount
     )];
     const tree = new MerkleTree(leaves, utils.keccak256, { sort: true });
     const root = tree.getHexRoot();

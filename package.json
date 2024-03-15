@@ -11,10 +11,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@thirdweb-dev/chains": "^0.1.73",
+    "@thirdweb-dev/chains": "^0.1.80",
     "@thirdweb-dev/engine": "^0.0.4",
-    "@thirdweb-dev/sdk": "^4.0.36",
-    "@thirdweb-dev/wallets": "^2.4.11",
+    "@thirdweb-dev/sdk": "^4.0.47",
+    "@thirdweb-dev/wallets": "^2.4.22",
     "@types/glob": "^8.1.0",
     "@types/node": "^18.15.2",
     "csv-parser": "^3.0.0",
