@@ -1,70 +1,85 @@
-import { ThirdwebSDK } from "@thirdweb-dev/sdk";
-import dotenv from "dotenv";
-import fs from "fs";
-import csv from "csv-parser";
+import { config } from "dotenv";
+import {
+  createThirdwebClient,
+  encode,
+  getContract,
+  prepareContractCall,
+  sendTransaction,
+  waitForReceipt,
+} from "thirdweb";
+import { base } from "thirdweb/chains";
+import {
+  generateMintSignature,
+  mintWithSignature,
+} from "thirdweb/extensions/erc721";
+import { privateKeyToAccount } from "thirdweb/wallets";
 
-type ResultType = {
-  address: string;
-  quantity: number;
-};
+config();
 
-dotenv.config();
+const main = async () => {
+  if (!process.env.WALLET_PRIVATE_KEY) {
+    throw new Error("No private key found");
+  }
+  if (!process.env.THIRDWEB_SECRET_KEY) {
+    throw new Error("No THIRDWEB_SECRET_KEY found");
+  }
+  try {
+    const chain = base;
+    const client = createThirdwebClient({
+      secretKey: process.env.THIRDWEB_SECRET_KEY,
+    });
+    const account = privateKeyToAccount({
+      client,
+      privateKey: process.env.WALLET_PRIVATE_KEY,
+    });
 
-let results: ResultType[] = [];
+    const contract = getContract({
+      client,
+      chain,
+      address: "0x25eacbE93C4Ea41720924edaeCe593CDE02BD7B3",
+    });
 
-const MAX_PER_TXN = 250;
+    const encodedTxArray = [];
 
-const run = async () => {
-  // Instantiate thirdweb SDK for read/write
-  // PRIVATE_KEY should be put into environment variable
-  const PRIVATE_KEY = process.env.KEY as string;
-
-  // check number of transactions required based on addresses
-  // divide by 250 and strip off the decimals
-  const transactionCount = Math.ceil(results.length / MAX_PER_TXN);
-
-  const sdk = ThirdwebSDK.fromPrivateKey(
-    PRIVATE_KEY, // Your wallet private key
-    "goerli" // configure this to your network
-  );
-
-  const contract = await sdk.getContract(
-    process.env.CONTRACT_ADDRESS as string
-  );
-
-  let encodedFnData: string[] = [];
-  // Loop through transaction batches
-  for (let c = 0; c < 1; c++) {
-    for (let i = 0; i < 1; i++) {
-      // get current result count and break if about to out of bounds
-     const current = c * MAX_PER_TXN + i;
-     if (current === results.length) break;
-
-      const claim1 = await contract.erc721.claimTo.prepare(
-        "0xeAa5a7D7fA42CBAff443FE1BDB764E608E039F97",
-        1
-      );
-      console.log(claim1);
-      encodedFnData.push(await claim1.encode());
-      console.log(encodedFnData)
-    }
-    // Call the multicall function with the encoded function data
-    const batchTx = await contract.call("multicall", [encodedFnData]);
-    console.log(batchTx);
-    encodedFnData = [];
-   }
-};
-
-// Load CSV and run file
-fs.createReadStream("airdrop.csv")
-  .pipe(csv())
-  .on("data", (data: ResultType) => results.push(data))
-  .on("end", () => {
-    // console.log(results);
-    run()
-      .then(() => process.exit(0))
-      .catch((err) => {
-        console.error(err);
-        process.exit(1);
+    // limit total gas used by multicall to around half of the block gas limit. For this example, that comes out to ~60 items for the multicall
+    for (let index = 0; index < 60; index++) {
+      const { payload, signature } = await generateMintSignature({
+        account,
+        contract,
+        mintRequest: {
+          to: "0x0E555C3c76ea7231D37B942BA89143023E32D4c9",
+          metadata: {
+            name: "Multicall NFT",
+            description: "This is my NFT",
+            image:
+              "ipfs://QmciR3WLJsf2BgzTSjbG5zCxsrEQ8PqsHK7JWGWsDSNo46/nft.png",
+          },
+        },
       });
-  });
+
+      const preparedTx = mintWithSignature({
+        contract,
+        payload,
+        signature,
+      });
+
+      let encodedTx = await encode(preparedTx);
+      encodedTxArray.push(encodedTx);
+    }
+
+    const transaction = prepareContractCall({
+      contract,
+      method: "function multicall(bytes[])", // from the docs: https://portal.thirdweb.com/contracts/build/extensions/general/Multicall
+      params: [encodedTxArray as `0x${string}`[]],
+    });
+
+    const transactionResult = await sendTransaction({ transaction, account });
+    const receipt = await waitForReceipt(transactionResult);
+    console.log("transactionResult", transactionResult);
+    console.log("receipt", receipt);
+  } catch (err) {
+    console.error("Something went wrong: ", err);
+  }
+};
+
+main();
